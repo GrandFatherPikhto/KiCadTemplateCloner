@@ -1,0 +1,55 @@
+components:
+- angle: 0.0
+  footprint: Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder
+  layer: F.Cu
+  ref: C419
+  rel_x: -1.4893749999999955
+  rel_y: -1.3400000000000034
+  value: 100 nF
+- angle: 0.0
+  footprint: Inductor_SMD:L_0402_1005Metric
+  layer: F.Cu
+  ref: FB403
+  rel_x: 0.9631249999999909
+  rel_y: -1.3400000000000034
+  value: BLM15PD121SN1D
+- angle: 0.0
+  footprint: Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder
+  layer: F.Cu
+  ref: C437
+  rel_x: 2.3106250000000017
+  rel_y: 1.3399999999999963
+  value: 1uF
+- angle: 0.0
+  footprint: Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder
+  layer: F.Cu
+  ref: C403
+  rel_x: -1.7843749999999972
+  rel_y: 1.3399999999999963
+  value: 1uF
+origin:
+- 114.731875
+- 35.21
+tracks:
+- end_rel_x: 0.4781249999999915
+  end_rel_y: -1.3400000000000034
+  layer: '3'
+  net: +2V5
+  start_rel_x: -0.921875
+  start_rel_y: -1.3400000000000034
+  width: 650000
+- end_rel_x: -0.921875
+  end_rel_y: -1.3400000000000034
+  layer: '3'
+  net: +2V5
+  start_rel_x: -0.921875
+  start_rel_y: 1.3399999999999963
+  width: 650000
+- end_rel_x: 1.4481250000000045
+  end_rel_y: 1.3399999999999963
+  layer: '3'
+  net: +2V5_VCCA
+  start_rel_x: 1.4481250000000045
+  start_rel_y: -1.3400000000000034
+  width: 650000
+vias: []

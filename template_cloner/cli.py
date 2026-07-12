@@ -2,7 +2,7 @@
 
 import click
 from .extractor import extract_template
-from .applier import apply_template
+# from .applier import apply_template
 
 @click.group()
 def cli():

@@ -155,3 +155,27 @@ class KiCadBoardAdapter:
         via.drill_diameter = int(drill_mm * MM)
         via.diameter = int(diameter_mm * MM)
         return via
+    
+    def get_selected_footprints(self):
+        """
+        Возвращает список выделенных компонентов (FootprintInstance).
+        """
+        from kipy import FootprintInstance
+        selected = self._board.get_selected_items()
+        footprints = [item for item in selected if isinstance(item, FootprintInstance)]
+        self.logger.debug(f"Получено {len(footprints)} выделенных компонентов")
+        return footprints
+    
+    def get_selected_components(self):
+        """
+        Возвращает список выделенных компонентов (Footprint) на текущей плате.
+        Использует duck typing вместо строгого импорта класса.
+        """
+        selected = self._board.get_selected_items()
+        components = []
+        for item in selected:
+            # Проверяем, что объект похож на компонент (есть методы get_reference и get_footprint_name)
+            if hasattr(item, 'get_reference') and hasattr(item, 'get_footprint_name'):
+                components.append(item)
+        self.logger.debug(f"Получено {len(components)} выделенных компонентов")
+        return components
